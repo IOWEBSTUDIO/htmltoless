@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+	<head>
+
+		<meta property="og:image" content="http://htmltocss.github.io/facebook.png"/>
+		<meta property="og:image:secure_url" content="http://htmltocss.github.io/facebook.png" />
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Convert (generate) HTML to CSS/SCSS/LESS Online">
+		<link rel="shortcut icon" href="http://pizza.byethost4.com/sites/default/files/fav-icon_1.png" type="image/png">
+		<title>Online HTML to CSS/SCSS/LESS/SASS Converter (Generator)</title>	
+		<link rel="image_src" href="http://htmltocss.github.io/facebook.png"/>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="js/lib/chosen/chosen.min.css">
+
+		<script type="text/javascript" src="js/lib/jquery.min.js"></script>		
+		<script type="text/javascript" src="js/lib/ace/ace.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/lib/zeroclipboard/jquery.zclip.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/lib/chosen/chosen.jquery.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/lib/chosen/chosen.proto.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/lib/jquery.timer.js"></script>
+		<script type="text/javascript" src="js/vars.js"></script>
+		<script type="text/javascript" src="js/lib/tabifier.js"></script>		
+		<script type="text/javascript" src="js/recursions.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>		
+		
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-61394552-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>	
+		<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+    	</script>	
+	</head>
+	<body>
+
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=125586044121801";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+		<script>window.twttr = (function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0],
+		    t = window.twttr || {};
+		  if (d.getElementById(id)) return t;
+		  js = d.createElement(s);
+		  js.id = id;
+		  js.src = "https://platform.twitter.com/widgets.js";
+		  fjs.parentNode.insertBefore(js, fjs);
+		 
+		  t._e = [];
+		  t.ready = function(f) {
+		    t._e.push(f);
+		  };
+		 
+		  return t;
+		}(document, "script", "twitter-wjs"));</script>
+
+		<a href="https://github.com/htmltocss/htmltocss.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+		<div class="l-container">
+			<header>
+				<h1>HTML to CSS/SCSS/LESS/SASS Converter (Generator)</h1>
+				<h4><a href="https://www.youtube.com/watch?v=cGL43gdIHgM">Watch a video</a></h4>
+				<p class="descr">All you need to do is put some valid HTML and get your styles!</p>				
+				<a id="bookmarkme" href="#" rel="sidebar" title="how to add this page to bookmarks">How Add to Bookmarks?</a>
+				<div class="timer" data-seconds-left="3"></div>
+			</header>
+			
+			<div class="l-buttons">		
+				<div class="btn-group e-modes">	
+					<button class="btn btn-success e-generate-full active">Full</button>
+					<button class="btn btn-success e-generate-base">Base</button>
+				</div>
+				<div class="social">
+					<g:plusone size="medium" align="right"></g:plusone>				
+					<div class="fb-share-button" data-href="http://htmltocss.github.io/" data-layout="button_count" data-image="https://perishablepress.com/wp/wp-content/themes/wire/img/s03.png"></div>					
+					<a class="twitter-share-button"
+					  href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fhtmltocss.github.io%2F"
+					  data-counturl="http://htmltocss.github.io/" >
+					</a>					
+				
+				</div>
+				<select style="display:none;" name="filter_forms" id="filter_forms" data-placeholder=" ▽  Choose form" multiple></select>
+			</div>
+
+			<div class="l-page">
+				<div class="l-sidebar">				
+					<fieldset class="advanced-settings">
+						<form class="advanced-settings-form">						
+							<div class="form-item radio-buttons">
+								<label>Selector Tag Name</label>
+								<div class="field">
+									<div class="radio-item">
+										<input type="radio" name="sel_tag_name" id="sel_tag_name-raw" value="raw" checked="checked">
+										<label for="sel_tag_name-raw">Only Raw Tags</label>
+									</div>
+									<div class="radio-item">
+										<input type="radio" name="sel_tag_name" id="sel_tag_name-id" value="id">
+										<label for="sel_tag_name-id">Tags with id</label>
+									</div>
+									<div class="radio-item">
+										<input type="radio" name="sel_tag_name" id="sel_tag_name-classes" value="classes">
+										<label for="sel_tag_name-classes">Tags with classes</label>
+									</div>
+									<div class="radio-item">
+										<input type="radio" name="sel_tag_name" id="sel_tag_name-all" value="all">
+										<label for="sel_tag_name-all">All Tags</label>
+									</div>									
+								</div>
+							</div>
+							<div class="form-item radio-buttons">
+								<label>Selector Priority</label>
+								<div class="field">
+									<div class="radio-item">
+										<input type="radio" name="sel_priority" id="sel_priority-class" value="class" checked="checked">
+										<label for="sel_priority-class">Class</label>
+									</div>
+									<div class="radio-item">
+										<input type="radio" name="sel_priority" id="sel_priority-id" value="id">
+										<label for="sel_priority-id">Id</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-item radio-buttons">
+								<label>Class Order</label>
+								<div class="field">
+									<div class="radio-item">
+										<input type="radio" name="class_order" id="class_order-first" value="first" checked="checked">
+										<label for="class_order-first">First</label>
+									</div>
+									<div class="radio-item">
+										<input type="radio" name="class_order" id="class_order-last" value="last">
+										<label for="class_order-last">Last</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-item radio-buttons">
+								<label>Raw Tags</label>
+								<div class="field">
+									<div class="radio-item">
+										<input type="radio" name="raw_tags" id="raw_tags-show-all" value="show_all" checked="checked">
+										<label for="raw_tags-show-all">Show All</label>
+									</div>
+									<div class="radio-item">
+										<input type="radio" name="raw_tags" id="raw_tags-remove-all" value="remove_all">
+										<label for="raw_tags-remove-all">Remove All</label>
+									</div>									
+								</div>
+							</div>
+
+							<div class="form-item form-select chosen">
+								<label>Excluded Classes</label>
+								<div class="field">								
+									<select name="excluded_classes" id="excluded_classes" class="anchor" data-placeholder=" ▽  Choose classes" multiple>					
+									</select>
+								</div>
+							</div>
+							<div class="form-item form-select chosen">
+								<label>Excluded Ids</label>
+								<div class="field">								
+									<select name="excluded_ids" id="excluded_ids" class="anchor" data-placeholder=" ▽  Choose ids" multiple>					
+									</select>
+								</div>
+							</div>
+							<div class="form-item form-select chosen">
+								<label>Excluded Tags</label>
+								<div class="field">								
+									<select name="excluded_tags" id="excluded_tags" class="anchor" data-placeholder=" ▽  Choose tags" multiple>	
+										<option value="input-hidden" selected>input-hidden</option>
+										<option value="img">img</option>
+									</select>
+								</div>
+							</div>
+						</form>
+					</fieldset>
+				</div>
+		
+				<div class="l-editors">
+					<div class="html-wrapper">
+						<h3>HTML</h3>						
+						<a href="#" id="e-select-all" class="btn btn-danger e-html-paste">Select All</a>						
+						<a href="#" id="e-format-html" class="btn btn-primary e-format-html">Format tabs</a>
+						<span class="html-status">No Changes</span>
+						<div id="html-editor">						
+						</div>
+					</div>
+					<div class="css-wrapper">
+						<h3>Styles</h3>
+						<a href="#" id="e-copy" class="btn btn-success e-css-copy">Copy</a>
+						<div class="btn-group e-css-sass">
+						<button class="btn btn-info e-generate-css">CSS</button>
+						<button class="btn btn-info active e-generate-scss">SCSS/LESS</button>		
+						<button class="btn btn-info e-generate-sass">SASS</button>
+						</div>
+						<div id="css-editor"></div>
+					</div>
+				</div>
+			</div>
+
+		    
+		    <script>        		                
+		    </script>
+		    <footer><p>© Copyright 2015. Maintained by <a href="mailto:alex.posidelov@gmail.com">alex.posidelov@gmail.com</a></p></footer>
+	    </div>
+	</body>
+</html>
