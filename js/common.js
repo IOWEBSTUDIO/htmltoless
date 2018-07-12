@@ -77,7 +77,7 @@ $(function() {
     }); 
 
 	$("#e-copy").zclip({ 
-		path: '/js/lib/zeroclipboard/ZeroClipboard.swf', 
+		path: 'js/lib/zeroclipboard/ZeroClipboard.swf', 
 		copy: function() {
 			var cssEditor = ace.edit("css-editor");
 			return cssEditor.session.getValue();
